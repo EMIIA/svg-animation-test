@@ -1,0 +1,68 @@
+
+
+svg.red path.front {
+  stroke: #440000;
+}
+
+svg.red path.back {
+  stroke: #BB0000;
+}
+
+svg.green path.front {
+  stroke: #006600;
+}
+
+svg.green path.back {
+  stroke: #00AA00;
+}
+
+svg.blue path.front {
+  stroke: #000044;
+}
+
+svg.blue path.back {
+  stroke: #0000BB;
+}
+
+
+svg.connection path, svg.inactive-connection path {
+  stroke-width: 8px;
+  fill: rgba(0, 0, 0, 0);
+}
+
+svg.connection path.front {
+  display: none;
+}
+
+svg.active path.front {
+  stroke-dasharray: 80;
+  animation: dash 8s linear infinite;
+  stroke-width: 4px;
+  fill: rgba(0, 0, 0, 0);
+  display: block;
+}
+
+svg.active path.back {
+  stroke-width: 8px;
+  fill: rgba(0, 0, 0, 0);
+}
+
+svg.inactive path.front {
+  display: block;
+  stroke-opacity: 0.6;
+  stroke-dasharray: 15;
+}
+
+svg.inactive path.back {
+  display: none;
+}
+
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1600;
+  }
+}
